@@ -3,7 +3,22 @@ name = "certbot-dns-pdns"
 version = "0.1.0"
 description = "DNS Authenticator for certbot using the PowerDNS API"
 authors = ["Felix Kaechele <felix@kaechele.ca>"]
+license = "Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/kaechele/certbot-dns-pdns"
+keywords = ["certbot", "powerdns", "acme", "letsencrypt", "dns"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Plugins",
+    "Intended Audience :: System Administrators",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"

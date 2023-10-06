@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+
 """DNS Authenticator for PowerDNS."""
 import logging
 from collections.abc import Callable
