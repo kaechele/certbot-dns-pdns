@@ -1,8 +1,9 @@
 # Certbot DNS Authenticator for PowerDNS
 
 PowerDNS DNS Authenticator plugin for [Certbot](https://certbot.eff.org).
+This plugin uses the PowerDNS HTTP API to request modifications for the DNS-01 challenge.
 
-# Usage
+## Usage
 
 Create a credentials file to use with this plugin:
 
@@ -26,10 +27,10 @@ certbot certonly \
     ...
 ```
 
-# License
+## License
 
 Apache License 2.0
 
-# Maintainer
+## Maintainer
 
 - Felix Kaechele <felix@kaechele.ca>
