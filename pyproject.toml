@@ -13,6 +13,7 @@ dns-lexicon = ">=3.15.0"
 [tool.poetry.group.dev.dependencies]
 black = ">=23.9.1"
 types-requests = ">=2.31.0.8"
+python-semantic-release = ">=8.1.1"
 
 [tool.poetry.plugins."certbot.plugins"]
 dns-pdns = "certbot_dns_pdns.dns_pdns:Authenticator"
@@ -37,3 +38,7 @@ warn_unused_ignores = true
 
 [tool.ruff]
 target-version = "py311"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:tool.poetry.version"]
+build_command = "pip install poetry && poetry build"
