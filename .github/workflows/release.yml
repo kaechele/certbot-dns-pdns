@@ -17,6 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
       - name: Python Semantic Release
         id: release
         uses: python-semantic-release/python-semantic-release@v8.1.1
