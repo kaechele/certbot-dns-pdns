@@ -57,10 +57,13 @@ class Authenticator(dns_common_lexicon.LexiconDNSAuthenticator):
 
     def _handle_http_error(self, e: HTTPError, domain_name: str) -> errors.PluginError:
         hint = None
-        logger.warning("HTTPError: %s", e)
+        if e.response.status_code == 401:
+            hint = "Is your API key correct?"
+        if e.response.status_code == 404:
+            hint = "Is your server ID correct?"
 
         hint_disp = f" ({hint})" if hint else ""
 
         return errors.PluginError(
-            f"Error determining zone identifier for {domain_name}: {e}.{hint_disp}"
+            f"Error determining zone identifier for {domain_name}: '{e}'.{hint_disp}"
         )
