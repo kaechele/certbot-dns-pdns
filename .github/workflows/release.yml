@@ -13,17 +13,20 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v4
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
       - name: Python Semantic Release
         id: release
-        uses: python-semantic-release/python-semantic-release@v8.1.1
+        # uses: python-semantic-release/python-semantic-release@v8.1.1
+        uses: zckv/python-semantic-release@switch_to_a_composite_action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 

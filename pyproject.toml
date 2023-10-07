@@ -56,4 +56,8 @@ target-version = "py311"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:tool.poetry.version"]
-build_command = "pip install poetry && poetry build"
+build_command = """
+    python -m pip install poetry
+    python -m poetry install
+    python -m poetry build
+"""
