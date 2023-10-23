@@ -413,13 +413,13 @@ files = [
 
 [[package]]
 name = "dns-lexicon"
-version = "3.16.0"
+version = "3.16.1"
 description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "dns_lexicon-3.16.0-py3-none-any.whl", hash = "sha256:9c70f0d667d614088f853b97439afeb446e330e325bafc412c7bf5c0d6dfbc59"},
-    {file = "dns_lexicon-3.16.0.tar.gz", hash = "sha256:9c495f3387ecb9abf8c65b43b783069d296a3927dc6c2386b16c6049624a9dea"},
+    {file = "dns_lexicon-3.16.1-py3-none-any.whl", hash = "sha256:238db805403bffd875ca12b46f060ac047ec891a9e524674ec56c1e3775c07cd"},
+    {file = "dns_lexicon-3.16.1.tar.gz", hash = "sha256:ddb110f35bb8f46497b8bab9085302317442881f45b72482cb3cc45bdcae734f"},
 ]
 
 [package.dependencies]
