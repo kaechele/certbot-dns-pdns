@@ -409,32 +409,50 @@ files = [
 
 [[package]]
 name = "dns-lexicon"
-version = "3.16.1"
+version = "3.17.0"
 description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "dns_lexicon-3.16.1-py3-none-any.whl", hash = "sha256:238db805403bffd875ca12b46f060ac047ec891a9e524674ec56c1e3775c07cd"},
-    {file = "dns_lexicon-3.16.1.tar.gz", hash = "sha256:ddb110f35bb8f46497b8bab9085302317442881f45b72482cb3cc45bdcae734f"},
+    {file = "dns_lexicon-3.17.0-py3-none-any.whl", hash = "sha256:eb45d67d17b37f9c9f18638cd4723fbaa36b92b380b8eefae307121acf2c9c6e"},
+    {file = "dns_lexicon-3.17.0.tar.gz", hash = "sha256:25871a7c145095ee21405525077856eadc059ab7692ae4c333f16563385d3c40"},
 ]
 
 [package.dependencies]
 beautifulsoup4 = ">=4"
 cryptography = ">=2"
+dnspython = ">=2"
 pyotp = ">=2"
 pyyaml = ">=3"
 requests = ">=2"
 tldextract = ">=2"
 
 [package.extras]
-ddns = ["dnspython (>=2)"]
-duckdns = ["dnspython (>=2)"]
-full = ["boto3 (>=1.28)", "dnspython (>=2)", "localzone (>=0.9.8)", "oci (>=2)", "softlayer (>=5)", "zeep (>=3)"]
+full = ["boto3 (>=1.28)", "localzone (>=0.9.8)", "oci (>=2)", "softlayer (>=5)", "zeep (>=3)"]
 gransy = ["zeep (>=3)"]
 localzone = ["localzone (>=0.9.8)"]
 oci = ["oci (>=2)"]
 route53 = ["boto3 (>=1.28)"]
 softlayer = ["softlayer (>=5)"]
+
+[[package]]
+name = "dnspython"
+version = "2.4.2"
+description = "DNS toolkit"
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "dnspython-2.4.2-py3-none-any.whl", hash = "sha256:57c6fbaaeaaf39c891292012060beb141791735dbb4004798328fc2c467402d8"},
+    {file = "dnspython-2.4.2.tar.gz", hash = "sha256:8dcfae8c7460a2f84b4072e26f1c9f4101ca20c071649cb7c34e8b6a93d58984"},
+]
+
+[package.extras]
+dnssec = ["cryptography (>=2.6,<42.0)"]
+doh = ["h2 (>=4.1.0)", "httpcore (>=0.17.3)", "httpx (>=0.24.1)"]
+doq = ["aioquic (>=0.9.20)"]
+idna = ["idna (>=2.1,<4.0)"]
+trio = ["trio (>=0.14,<0.23)"]
+wmi = ["wmi (>=1.5.1,<2.0.0)"]
 
 [[package]]
 name = "dotty-dict"
