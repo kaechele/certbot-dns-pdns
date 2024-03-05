@@ -26,7 +26,6 @@ certbot = ">=2.7.0"
 dns-lexicon = ">=3.15.0"
 
 [tool.poetry.group.dev.dependencies]
-black = ">=23.9.1"
 types-requests = ">=2.31.0.8"
 python-semantic-release = ">=8.1.1"
 
@@ -36,9 +35,6 @@ dns-pdns = "certbot_dns_pdns.dns_pdns:Authenticator"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-target-version = ["py311", "py312"]
 
 [tool.mypy]
 python_version = "3.11"
