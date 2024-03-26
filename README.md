@@ -4,6 +4,10 @@ PowerDNS DNS Authenticator plugin for [Certbot](https://certbot.eff.org). This
 plugin uses the PowerDNS HTTP API to request modifications for the DNS-01
 challenge.
 
+A design goal of this plugin is to use the minimal amount of custom code to
+achieve integration with PowerDNS. As such it uses the existing Lexicon-based
+DNS framework in Certbot.
+
 ## Installation
 
 1. Install the plugin from PyPI
