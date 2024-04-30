@@ -62,6 +62,8 @@ class Authenticator(dns_common_lexicon.LexiconDNSAuthenticator):
             hint = "Is your API key correct?"
         if e.response.status_code == 404:
             hint = "Is your server ID correct?"
+            if (domain_name.split('.')) > 1:
+                return False
 
         hint_disp = f" ({hint})" if hint else ""
 
