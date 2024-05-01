@@ -1,0 +1,23 @@
+name: Check Pull Requests
+
+on:
+  pull_request:
+
+jobs:
+  pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
+
+      - name: Autofix using pre-commit-ci-lite
+        uses: pre-commit-ci/lite-action@v1.0.2
+        if: always()
