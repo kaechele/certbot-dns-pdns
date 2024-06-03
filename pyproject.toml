@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "certbot-dns-pdns"
-version = "0.1.0"
+version = "0.1.1"
 description = "DNS Authenticator for certbot using the PowerDNS API"
 authors = ["Felix Kaechele <felix@kaechele.ca>"]
 license = "Apache-2.0"
