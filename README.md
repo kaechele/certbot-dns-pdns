@@ -16,6 +16,12 @@ DNS framework in Certbot.
    pip install certbot-dns-pdns
    ```
 
+   Alternatively you can also install both certbot and the plugin using `pipx`:
+
+   ```shell
+   pipx install certbot certbot-dns-pdns
+   ```
+
 2. Verify that the plugin is installed:
 
    ```shell
@@ -56,6 +62,15 @@ certbot certonly \
     --dns-pdns-credentials ~/pdns-credentials.ini \
     ...
 ```
+
+## Contributing
+
+Pull requests are welcome. GitHub automatically runs `pre-commit` on any pull
+requests, so you may want to enable `pre-commit` on your end, so your PR doesn't
+fail these checks.
+
+This repository uses [Conventional Commits](https://www.conventionalcommits.org)
+commit messages. Check the git log for examples on how to use them.
 
 ## License
 
