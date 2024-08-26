@@ -400,13 +400,13 @@ files = [
 
 [[package]]
 name = "dns-lexicon"
-version = "3.17.0"
+version = "3.18.0"
 description = "Manipulate DNS records on various DNS providers in a standardized/agnostic way"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = "<4.0,>=3.8"
 files = [
-    {file = "dns_lexicon-3.17.0-py3-none-any.whl", hash = "sha256:eb45d67d17b37f9c9f18638cd4723fbaa36b92b380b8eefae307121acf2c9c6e"},
-    {file = "dns_lexicon-3.17.0.tar.gz", hash = "sha256:25871a7c145095ee21405525077856eadc059ab7692ae4c333f16563385d3c40"},
+    {file = "dns_lexicon-3.18.0-py3-none-any.whl", hash = "sha256:aabe320093b4f9a7f7e0e430551ae49c38c9cf99b45ef7e28da238c50106b1a0"},
+    {file = "dns_lexicon-3.18.0.tar.gz", hash = "sha256:c2b1005a6621a2ec648131d96ec61304b90b98842af9ff62b1840ddf9d0e2c26"},
 ]
 
 [package.dependencies]
@@ -419,10 +419,11 @@ requests = ">=2"
 tldextract = ">=2"
 
 [package.extras]
-full = ["boto3 (>=1.28)", "localzone (>=0.9.8)", "oci (>=2)", "softlayer (>=5)", "zeep (>=3)"]
+full = ["boto3 (>=1.28)", "localzone (>=0.9.8)", "oci (>=2)", "softlayer (>=5)", "tencentcloud-sdk-python (>=3)", "zeep (>=3)"]
 gransy = ["zeep (>=3)"]
 localzone = ["localzone (>=0.9.8)"]
 oci = ["oci (>=2)"]
+qcloud = ["tencentcloud-sdk-python (>=3)"]
 route53 = ["boto3 (>=1.28)"]
 softlayer = ["softlayer (>=5)"]
 
