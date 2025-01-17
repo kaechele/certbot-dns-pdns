@@ -5,8 +5,12 @@ plugin uses the PowerDNS HTTP API to request modifications for the DNS-01
 challenge.
 
 A design goal of this plugin is to use the minimal amount of custom code to
-achieve integration with PowerDNS. As such it uses the existing Lexicon-based
-DNS framework in Certbot.
+achieve integration with PowerDNS.
+
+As such it uses the existing Lexicon-based DNS framework in Certbot and may not
+work for you if you are using intermediary tools, such as PowerDNS-Admin or a
+restrictively configured reverse proxy, to implement access restrictions or
+Role-based Access controls (RBAC).
 
 ## Installation
 
@@ -62,6 +66,18 @@ certbot certonly \
     --dns-pdns-credentials ~/pdns-credentials.ini \
     ...
 ```
+
+> [!NOTE]
+>
+> Since this plugin communicates with PowerDNS via the HTTP API make sure that
+> the `SOA-EDIT-API` setting for your zone is set to a value that results in an
+> increase of the SOA serial (i.e. the setting exists in your domain metadata).
+> Otherwise the changes made to the zone by this plugin will not propagate to
+> any secondaries you may have configured, causing the certificate challenge to
+> potentially fail.
+>
+> For more information see the
+> [PowerDNS documentation](https://doc.powerdns.com/authoritative/domainmetadata.html#soa-edit-api)
 
 ## Contributing
 
