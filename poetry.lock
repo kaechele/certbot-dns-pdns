@@ -415,6 +415,7 @@ version = "1.2.18"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+groups = ["dev"]
 files = [
     {file = "Deprecated-1.2.18-py2.py3-none-any.whl", hash = "sha256:bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec"},
     {file = "deprecated-1.2.18.tar.gz", hash = "sha256:422b6f6d859da6f2ef57857761bfb392480502a64c3028ca9bbe86085d72115d"},
@@ -424,7 +425,7 @@ files = [
 wrapt = ">=1.10,<2"
 
 [package.extras]
-dev = ["PyTest", "PyTest-Cov", "bump2version (<1)", "setuptools", "tox"]
+dev = ["PyTest", "PyTest-Cov", "bump2version (<1)", "setuptools ; python_version >= \"3.12\"", "tox"]
 
 [[package]]
 name = "distro"
@@ -976,18 +977,18 @@ yaml = ["PyYaml (>=6.0.1)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "9.21.0"
+version = "10.3.2"
 description = "Automatic Semantic Versioning for Python projects"
 optional = false
-python-versions = ">=3.8"
+python-versions = "~=3.8"
 groups = ["dev"]
 files = [
-    {file = "python_semantic_release-9.21.0-py3-none-any.whl", hash = "sha256:1ecf9753283835f1c6cda4702e419d9702863a51b03fa11955429139234f063c"},
-    {file = "python_semantic_release-9.21.0.tar.gz", hash = "sha256:d8673d25cab2acdfeb34f791e271bb8a02ecc63650c5aa5c03d520ddf0cbe887"},
+    {file = "python_semantic_release-10.3.2-py3-none-any.whl", hash = "sha256:d41d48efc56933b90c718bdfe2a235a986f06b8b371bd6598c8f18c05fe22517"},
+    {file = "python_semantic_release-10.3.2.tar.gz", hash = "sha256:c171d610c04f7c42ccf3e39073ec76afc98e0bd2ed704872790035fea1256e61"},
 ]
 
 [package.dependencies]
-click = ">=8.0,<9.0"
+click = ">=8.1.0,<8.2.0"
 click-option-group = ">=0.5,<1.0"
 Deprecated = ">=1.2,<2.0"
 dotty-dict = ">=1.3,<2.0"
@@ -995,9 +996,9 @@ gitpython = ">=3.0,<4.0"
 importlib-resources = ">=6.0,<7.0"
 jinja2 = ">=3.1,<4.0"
 pydantic = ">=2.0,<3.0"
-python-gitlab = ">=4.0,<5.0"
+python-gitlab = ">=4.0.0,<7.0.0"
 requests = ">=2.25,<3.0"
-rich = ">=13.0,<14.0"
+rich = ">=14.0,<15.0"
 shellingham = ">=1.5,<2.0"
 tomlkit = ">=0.11,<1.0"
 
@@ -1005,8 +1006,8 @@ tomlkit = ">=0.11,<1.0"
 build = ["build (>=1.2,<2.0)"]
 dev = ["pre-commit (>=3.5,<4.0)", "ruff (==0.6.1)", "tox (>=4.11,<5.0)"]
 docs = ["Sphinx (>=6.0,<7.0)", "furo (>=2024.1,<2025.0)", "sphinx-autobuild (==2024.2.4)", "sphinxcontrib-apidoc (==0.5.0)"]
-mypy = ["mypy (==1.15.0)", "types-Deprecated (>=1.2,<2.0)", "types-pyyaml (>=6.0,<7.0)", "types-requests (>=2.32.0,<2.33.0)"]
-test = ["coverage[toml] (>=7.0,<8.0)", "filelock (>=3.15,<4.0)", "flatdict (>=4.0,<5.0)", "freezegun (>=1.5,<2.0)", "pytest (>=8.3,<9.0)", "pytest-clarity (>=1.0,<2.0)", "pytest-cov (>=5.0,<6.0)", "pytest-env (>=1.0,<2.0)", "pytest-lazy-fixtures (>=1.1.1,<1.2.0)", "pytest-mock (>=3.0,<4.0)", "pytest-order (>=1.3,<2.0)", "pytest-pretty (>=1.2,<2.0)", "pytest-xdist (>=3.0,<4.0)", "pyyaml (>=6.0,<7.0)", "requests-mock (>=1.10,<2.0)", "responses (>=0.25.0,<0.26.0)"]
+mypy = ["mypy (==1.16.1)", "types-Deprecated (>=1.2,<2.0)", "types-pyyaml (>=6.0,<7.0)", "types-requests (>=2.32.0,<2.33.0)"]
+test = ["coverage[toml] (>=7.0,<8.0)", "filelock (>=3.15,<4.0)", "flatdict (>=4.0,<5.0)", "freezegun (>=1.5,<2.0)", "pytest (>=8.3,<9.0)", "pytest-clarity (>=1.0,<2.0)", "pytest-cov (>=5.0.0,<7.0.0)", "pytest-env (>=1.0,<2.0)", "pytest-lazy-fixtures (>=1.1.1,<1.2.0)", "pytest-mock (>=3.0,<4.0)", "pytest-order (>=1.3,<2.0)", "pytest-pretty (>=1.2,<2.0)", "pytest-xdist (>=3.0,<4.0)", "pyyaml (>=6.0,<7.0)", "requests-mock (>=1.10,<2.0)", "responses (>=0.25.0,<0.26.0)"]
 
 [[package]]
 name = "pytz"
@@ -1166,14 +1167,14 @@ requests = ">=2.0.1,<3.0.0"
 
 [[package]]
 name = "rich"
-version = "13.9.4"
+version = "14.1.0"
 description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
 optional = false
 python-versions = ">=3.8.0"
 groups = ["dev"]
 files = [
-    {file = "rich-13.9.4-py3-none-any.whl", hash = "sha256:6049d5e6ec054bf2779ab3358186963bac2ea89175919d699e378b99738c2a90"},
-    {file = "rich-13.9.4.tar.gz", hash = "sha256:439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"},
+    {file = "rich-14.1.0-py3-none-any.whl", hash = "sha256:536f5f1785986d6dbdea3c75205c473f970777b4a0d6c6dd1b696aa05a3fa04f"},
+    {file = "rich-14.1.0.tar.gz", hash = "sha256:e497a48b844b0320d45007cdebfeaeed8db2a4f4bcf49f15e455cfc4af11eaa8"},
 ]
 
 [package.dependencies]
@@ -1305,6 +1306,7 @@ version = "1.17.2"
 description = "Module for decorators, wrappers and monkey patching."
 optional = false
 python-versions = ">=3.8"
+groups = ["dev"]
 files = [
     {file = "wrapt-1.17.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3d57c572081fed831ad2d26fd430d565b76aa277ed1d30ff4d40670b1c0dd984"},
     {file = "wrapt-1.17.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:b5e251054542ae57ac7f3fba5d10bfff615b6c2fb09abeb37d2f1463f841ae22"},
